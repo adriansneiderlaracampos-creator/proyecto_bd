@@ -21,7 +21,6 @@ body {
     padding: 0 20px;
 }
 
-/* --- Barra de Navegación (Navbar) --- */
 .navbar {
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -45,7 +44,7 @@ body {
 }
 
 .logo strong {
-    color: #2563eb;
+    color: #eb2525;
 }
 
 .nav-links {
@@ -61,10 +60,9 @@ body {
 }
 
 .nav-links a:hover {
-    color: #2563eb;
+    color: #eb2525;
 }
 
-/* --- Contenido Principal --- */
 main {
     flex: 1;
     padding: 40px 20px;
@@ -85,7 +83,6 @@ main {
     font-size: 1rem;
 }
 
-/* --- Layout del Panel (Formulario + Lista) --- */
 .panel-tienda {
     display: grid;
     grid-template-columns: 360px 1fr;
@@ -94,7 +91,6 @@ main {
     margin-bottom: 35px;
 }
 
-/* Tarjeta contenedora blanca */
 .tarjeta {
     background-color: #ffffff;
     border-radius: 12px;
@@ -110,7 +106,6 @@ main {
     padding-bottom: 8px;
 }
 
-/* --- Formulario --- */
 form {
     display: flex;
     flex-direction: column;
@@ -142,11 +137,10 @@ textarea {
 
 input:focus,
 textarea:focus {
-    border-color: #2563eb;
+    border-color: #eb2525;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-/* Botones */
 .btn {
     padding: 12px;
     font-family: inherit;
@@ -169,16 +163,16 @@ textarea:focus {
 
 .btn-guardar {
     flex: 1;
-    background-color: #2563eb;
+    background-color: #eb2525;
     color: #ffffff;
 }
 
 .btn-guardar:hover {
-    background-color: #1d4ed8;
+    background-color: #d81d1d;
 }
 
 .btn-cancelar {
-    background-color: #e2e8f0;
+    background-color: #000000;
     color: #475569;
 }
 
@@ -197,7 +191,6 @@ textarea:focus {
     background-color: #334155;
 }
 
-/* --- Tarjetas de Producto --- */
 .lista-productos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -227,7 +220,7 @@ textarea:focus {
 
 .producto-precio {
     font-weight: 700;
-    color: #2563eb;
+    color: #eb2525;
     font-size: 1.1rem !important;
 }
 
@@ -262,10 +255,9 @@ textarea:focus {
 }
 
 .btn-eliminar:hover {
-    background-color: #fca5a5;
+    background-color: #ff0000;
 }
 
-/* --- Sección Contacto --- */
 .seccion-contacto {
     margin-top: 10px;
 }
@@ -282,9 +274,8 @@ textarea:focus {
     gap: 15px;
 }
 
-/* --- Pie de Página (Footer) --- */
 .footer {
-    background-color: #0f172a;
+    background-color: #ff0000;
     color: #94a3b8;
     padding: 20px 0;
     margin-top: auto;

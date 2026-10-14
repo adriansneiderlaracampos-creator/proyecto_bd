@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - MiTienda</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #d81d1d;
+        }
+
+        .campo {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background-color: #eb2525;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-enviar:hover {
+            background-color: #d81d1d71;
+        }
+
+        .btn-enviar:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #estadoContacto {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .comentario {
+            margin-top: 15px;
+            padding: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            background-color: #f8fafc;
+            overflow-wrap: anywhere;
+        }
+
+        .comentario h3 {
+            margin-top: 0;
+            color: #ff0000;
+        }
+
+        .comentario p {
+            line-height: 1.5;
+        }
+
+        .btn-eliminar {
+            padding: 9px 13px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff0000;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-eliminar:hover {
+            background-color: #ff0000;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #ff0000;
+            text-decoration: none;
+        }
+
+        .volver:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="contenedor">
+        <a class="volver" href="index.html">← Volver a la tienda</a>
+
+        <h1>Contáctanos</h1>
+        <p>Déjanos tus dudas, sugerencias o comentarios.</p>
+
+        <form id="formularioContacto">
+            <div class="campo">
+                <label for="contactoNombre">Nombre:</label>
+                <input
+                    type="text"
+                    id="contactoNombre"
+                    name="nombre"
+                    maxlength="100"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="contactoEmail">Correo electrónico:</label>
+                <input
+                    type="email"
+                    id="contactoEmail"
+                    name="email"
+                    maxlength="150"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="contactoAsunto">Asunto:</label>
+                <input
+                    type="text"
+                    id="contactoAsunto"
+                    name="asunto"
+                    maxlength="150"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="contactoComentarios">Mensaje o comentario:</label>
+                <textarea
+                    id="contactoComentarios"
+                    name="comentarios"
+                    maxlength="3000"
+                    required
+                ></textarea>
+            </div>
+
+            <button
+                type="submit"
+                id="btnEnviarContacto"
+                class="btn-enviar"
+            >
+                Enviar mensaje
+            </button>
+
+            <p id="estadoContacto" role="status"></p>
+        </form>
+
+        <hr>
+
+        <h2>Comentarios recibidos</h2>
+        <div id="listaComentariosContacto">
+            <p>Cargando comentarios...</p>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
